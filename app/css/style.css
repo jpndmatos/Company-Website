@@ -1,7 +1,7 @@
 /* Hallmark | theme: brand | genre: modern-minimal | redesign: full | signature: real architectural 3D scan | modes: light+dark */
 /* Critique: retain the heritage portfolio and interactive model; replace gradients and repeated centre stacks with a quiet project index. */
-/* Hallmark · waived 8 · The service list and alternating project records are the existing content and preserve its sequence. */
-/* Hallmark � dismissed 25 � 32ch is a single factual introductory sentence, not a prose column. */
+/* Hallmark Â· waived 8 Â· The service list and alternating project records are the existing content and preserve its sequence. */
+/* Hallmark · dismissed 25 · 32ch is a single factual introductory sentence, not a prose column. */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -22,7 +22,7 @@ a {color:var(--accent)}p {color:var(--muted)}
 .site-header ul {display:flex;align-items:center;gap:var(--space-2);margin:0;padding:0;list-style:none}
 .site-header nav a {display:block;padding:var(--space-2) var(--space-3);min-height:44px;font-size:13px;text-decoration:none;color:var(--muted);border-radius:var(--radius)}
 .site-header nav a:hover,.site-header nav a[aria-current] {color:var(--accent);background:var(--well)}
-.theme-button {border:1px solid var(--rule);border-radius:var(--radius);padding:var(--space-2) var(--space-3);min-height:44px;color:var(--ink);background:var(--surface);font-size:13px}
+.theme-button {width:44px;height:44px;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--rule);border-radius:var(--radius);padding:var(--space-2);min-height:44px;color:var(--ink);background:var(--surface);font-size:13px}
 .theme-button:hover {border-color:var(--accent)}
 .landing {max-width:1200px;margin:auto;padding:var(--space-16) var(--space-6)}
 .landing-content {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:var(--space-16);align-items:center}
