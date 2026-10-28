@@ -1,12 +1,10 @@
-<h1><img src="public/header/logo.svg" alt="Doppel" width="200"></h1>
+# Website
 
-A company website for cultural heritage work, with an interactive 3D architectural scan, a project portfolio, service information and contact details.
+<img src="docs/ui.svg" alt="Layout, 3D viewer and theme controls" width="144" height="36">
 
-<img src="public/img/beja2.png" alt="Beja Monumental heritage reconstruction featured in the portfolio" width="1000">
+A responsive website with a project gallery, an interactive 3D viewer, and light and dark themes.
 
-*Beja Monumental, one of the heritage projects featured on the site.*
-
-Built with Next.js, TypeScript, React Three Fiber and Three.js. Poppins typography, responsive navigation, keyboard focus states and a saved light or dark theme.
+Built with Next.js, TypeScript, React Three Fiber, and Three.js.
 
 ## Run locally
 
@@ -15,4 +13,4 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`. Run `npm run build` for a production build. Project images and the 3D scan are included in `public/`.
+Open `http://localhost:3000`. Use `npm run build` for a production build.
