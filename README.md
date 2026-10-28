@@ -1,4 +1,4 @@
-Doppel Website dupe (redacted to avoyd copyright infringement)
+Doppel Website dupe (redacted to avoid copyright infringement)
 ## Setup
 npm install
 
