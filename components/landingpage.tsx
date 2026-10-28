@@ -13,17 +13,17 @@ export default function Landing() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section 
+    <section
     ref={ref}
-    id="#Doppel" 
-    className="flex flex-col justify-center items-center min-h-screen">
-      <div className="h-auto max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <div className="pt-24 pb-10 md:pt-32 md:pb-12 relative">
-          <div className="relative max-w-3xl mx-auto text-center items-center">
-            <h1 className="h1 mb-2" data-aos="fade-up">We are Doppel</h1>
-            <p className="text-2xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="200">The bridge between the physical and the virtual world.</p>
-            <div className="h-50v" data-aos="fade-up" data-aos-delay="600">
-              <Canvas>
+    id="Doppel"
+    className="landing">
+      <div className="landing-inner">
+        <div className="landing-grid">
+          <div className="landing-content">
+            <h1 className="h1 mb-2" data-aos="fade-up">Cultural heritage, in 3D</h1>
+            <p className="text-2xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="200">3D recording, virtual reconstruction and interactive experiences for cultural heritage.</p>
+            <div className="model-viewer" role="img" aria-label="Interactive 3D scan of a carved architectural capital" data-aos="fade-up" data-aos-delay="600">
+              <Canvas frameloop="demand">
                 <Suspense fallback={null}>
                   <OrbitControls
                     enableDamping={true}
@@ -42,13 +42,13 @@ export default function Landing() {
             <div className="flex rounded-full flex-col items-center justify-center pt-8 md:pt-12" data-aos="fade-up">
               <Link
                 href="#About"
-                className="rounded-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue from-0% to-pink to-100% animate-gradient bg-300% text-white px-7 py-3 flex items-center gap-2 hover:bg-pink" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor-placement="top-bottom"
+                className="primary-link" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor-placement="top-bottom"
                 onClick={() => {
                   setActiveSection("About");
                   setTimeOfLastClick(Date.now());
                 }}
                 >
-                Get to know us
+                About Doppel
               </Link>
             </div>
           </div>

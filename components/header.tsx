@@ -1,62 +1,12 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { links } from "@/lib/data";
 import Link from "next/link";
-import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
-  return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-1/2 h-[3.5rem] w-full rounded-none bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue from-15% to-pink to-100% animate-gradient bg-300% shadow-lg shadow-black/[0.2] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.3rem] sm:w-[26rem] sm:rounded-full"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      >
-      </motion.div>
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.6rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 font-medium text-white sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 transition ",
-                  {
-                    "text-blue font-semibold":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-white rounded-full absolute inset-0 -z-10"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 480,
-                      damping: 35,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
+ const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+ const [dark,setDark]=useState(false);
+ useEffect(()=>{const saved=localStorage.getItem('doppel-mode'); const mode=saved || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); document.documentElement.dataset.mode=mode;setDark(mode==='dark');},[]);
+ function toggle(){const next=!dark;setDark(next);document.documentElement.dataset.mode=next?'dark':'light';localStorage.setItem('doppel-mode',next?'dark':'light');}
+ return <header className="site-header"><div className="header-inner"><Link href="#Doppel" className="wordmark" aria-label="Doppel home">doppel</Link><nav aria-label="Main navigation"><ul>{links.map(link=><li key={link.hash}><Link aria-current={activeSection===link.name?'location':undefined} href={link.hash} onClick={()=>{setActiveSection(link.name);setTimeOfLastClick(Date.now());}}>{link.name}</Link></li>)}</ul></nav><button type="button" className="theme-button" onClick={toggle} aria-pressed={dark}>{dark?'Light':'Dark'}</button></div></header>;
 }
