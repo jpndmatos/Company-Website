@@ -1,6 +1,6 @@
 # Website
 
-A responsive website with a project gallery, an interactive 3D viewer, and light and dark themes.
+A website with a project gallery and an interactive 3D viewer. Includes light and dark themes.
 
 Built with Next.js, TypeScript, React Three Fiber, and Three.js.
 
