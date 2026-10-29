@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className="doppel-app"
+        className="website-app"
       >
         <div className="flex flex-col min-h-screen">
           <ActiveSectionContextProvider>

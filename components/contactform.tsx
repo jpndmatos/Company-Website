@@ -11,11 +11,11 @@ export default function ContactForm() {
         <div className="relative rounded-3xl py-10 px-2 md:py-16 md:px-12" data-aos="fade-up">
           <div className="relative flex flex-col lg:flex-row justify-between items-center">
             <div className="mb-6 lg:mr-16 lg:mb-0 text-left lg:w-1/2">
-              <h2 className="h1 text-white mb-6">Contact Doppel</h2>
+              <h2 className="h1 text-white mb-6">Contact</h2>
               <h3 className="h3 text-white">
                 Contact us directly at{" "}
-                <a className="underline" href="mailto:hello@doppel.pt">
-                  hello@doppel.pt
+                <a className="underline" href="mailto:hello@example.com">
+                  hello@example.com
                 </a>
                 </h3>
             </div>

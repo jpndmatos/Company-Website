@@ -13,9 +13,9 @@ export default function Footer() {
           <div className="reltive justify-start text-left">
             <Link href="https://www.livroreclamacoes.pt/Pedido/Reclamacao" target="_blank" className="text-sm mb-2 text-gray-600 hover:text-pink transition duration-150 ease-in-out">Complaints Book</Link>
             <div className="text-gray-600 text-sm py-0">
-              &copy; Doppel 2023. All rights reserved.
+              &copy; Company 2023. All rights reserved.
             </div>
-            <div className="relative justify-end text-sm text-right text-gray-600">+351 916668897<br/>hello@doppel.pt<br/>Rua Pedro Nunes, IPN, Bloco C<br/>3030-119 Coimbra, Portugal</div>
+            <div className="relative justify-end text-sm text-right text-gray-600">+351 916668897<br/>hello@example.com<br/>Rua Pedro Nunes, IPN, Bloco C<br/>3030-119 Coimbra, Portugal</div>
           </div>
         </div>
       </div>

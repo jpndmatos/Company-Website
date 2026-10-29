@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Doppel',
+  title: 'Company Website',
 }
 import Landing from '@/components/landingpage'
 import About from '@/components/about'

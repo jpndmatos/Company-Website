@@ -14,8 +14,8 @@ export default function About() {
     <div className="rounded-3xl bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue from-70% to-pink to-100% animate-gradient bg-300% max-w-6xl mx-auto px-8 sm:px-16 div-3d-hover">
       <div className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20" data-aos="fade-up" data-aos-delay="100">
-          <h2 className="h1 mb-12 font-semibold text-white">About Doppel</h2>
-          <p className="text-xl leading-9 font-normal text-gray-300">At Doppel we develop integrated digital and physical solutions for Cultural Heritage, with a strong focus on 3D Digitalization and interactive digital environments with a team of specialized professionals with a background in Archeology and Heritage, Digital Media and Graphic Design that offers an innovative approach for Heritage dissemination and education</p>
+          <h2 className="h1 mb-12 font-semibold text-white">About the company</h2>
+          <p className="text-xl leading-9 font-normal text-gray-300">We develop integrated digital and physical solutions for Cultural Heritage, with a strong focus on 3D Digitalization and interactive digital environments with a team of specialized professionals with a background in Archeology and Heritage, Digital Media and Graphic Design that offers an innovative approach for Heritage dissemination and education</p>
         </div>
         <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-3 lg:grid-cols-5 lg:gap-16 md:max-w-2xl lg:max-w-none text-center">
           {/* 1 */}

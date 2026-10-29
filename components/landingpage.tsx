@@ -9,13 +9,13 @@ import ModelCapitel from "@/public/capitelmodel/CapitelLow";
 
 
 export default function Landing() {
-  const { ref } = useSectionInView("Doppel");
+  const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
     ref={ref}
-    id="Doppel"
+    id="Home"
     className="landing">
       <div className="landing-inner">
         <div className="landing-grid">
@@ -48,7 +48,7 @@ export default function Landing() {
                   setTimeOfLastClick(Date.now());
                 }}
                 >
-                About Doppel
+                About the company
               </Link>
             </div>
           </div>
